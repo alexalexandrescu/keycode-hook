@@ -1,0 +1,30 @@
+{
+	"compilerOptions": {
+		"target": "ES2015",
+		"module": "ESNext",
+		"lib": ["DOM", "DOM.Iterable", "ESNext"],
+		"allowJs": false,
+		"declaration": true,
+		"declarationMap": true,
+		"sourceMap": true,
+		"outDir": "dist",
+		"rootDir": "src",
+		"strict": true,
+		"moduleResolution": "Node",
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"forceConsistentCasingInFileNames": true,
+		"jsx": "react",
+		"resolveJsonModule": true,
+		"isolatedModules": true,
+		"noEmit": false
+	},
+	"include": ["src"],
+	"exclude": [
+		"node_modules",
+		"dist",
+		"**/__tests__/**",
+		"**/*.test.ts",
+		"**/*.test.tsx"
+	]
+}
