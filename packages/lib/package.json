@@ -1,13 +1,24 @@
 {
 	"name": "keycode-hook",
-	"version": "1.0.0",
-	"description": "A React hotkey library with scoping and dynamic hotkey binding.",
+	"version": "0.0.1",
+  "description": "A React hotkey library with scoping and dynamic hotkey binding.",
+  "keywords": ["react", "hotkey", "keyboard shortcut", "hooks", "scoping", "key bindings"],
 	"main": "dist/index.js",
 	"module": "dist/index.esm.js",
 	"types": "dist/index.d.ts",
 	"license": "MIT",
-	"files": [
-		"dist"
+  "homepage": "https://github.com/alexalexandrescu/keycode-hook",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alexalexandrescu/keycode-hook.git"
+  },
+  "author": {
+    "email": "alexandrescu.alex@gmail.com",
+    "name": "Alex Alexandrescu"
+  },
+  "files": [
+		"dist",
+    "README.md"
 	],
 	"scripts": {
 		"build": "tsc -p tsconfig.build.json && rollup -c",
@@ -15,12 +26,13 @@
 		"test": "jest --coverage",
 		"lint": "biome lint --write src",
 		"format": "biome format --write src",
-		"prebuild": "biome lint src"
+		"prebuild": "biome lint src",
+    "prepublishOnly": "yarn build"
 	},
-	"peerDependencies": {
-		"react": "*",
-		"react-dom": "*"
-	},
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
 	"dependencies": {
 		"keyboard-code-enum": "^0.0.2",
 		"typescript": "^5.6.3"
